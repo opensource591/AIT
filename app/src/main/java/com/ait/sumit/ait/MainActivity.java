@@ -24,6 +24,7 @@ import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
     //strings
     String asset = "file:///android_asset/";
     String contact= "https://foxerweb.wordpress.com/contact/";
@@ -32,12 +33,12 @@ public class MainActivity extends AppCompatActivity
     String kernel = "http://google";
     // Get the HTML file name
     String unrooted= "unrooted.html";
-    String root_interrupted= "root_interrupted.html";
     String home = "home.html";
     String ErrorFile = "error.html";
     String file = asset+home;
     String error = asset+ErrorFile;
     //
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -127,10 +128,17 @@ public class MainActivity extends AppCompatActivity
                     }
                     else {
                         // TODO Code to run on unsuccessful
+                        WebView mywebview = (WebView) this.findViewById(R.id.webView);
+                        mywebview.getSettings() .setJavaScriptCanOpenWindowsAutomatically(true);
+                        mywebview.addJavascriptInterface(new WebAppInterface(this), "Android");
+                        mywebview.loadUrl(unrooted);
 
                     }
                 } catch (InterruptedException e) {
-                    // TODO Code to run in interrupted exception
+                    WebView mywebview = (WebView) this.findViewById(R.id.webView);
+                    mywebview.getSettings() .setJavaScriptCanOpenWindowsAutomatically(true);
+                    mywebview.addJavascriptInterface(new WebAppInterface(this), "Android");
+                    mywebview.loadUrl(unrooted);
                 }
             } catch (IOException e) {
                 // TODO Code to run in input/output exception
