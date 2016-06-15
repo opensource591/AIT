@@ -25,6 +25,10 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     //strings
     String asset = "file:///android_asset/";
+    String contact= "https://foxerweb.wordpress.com/contact/";
+    String rom="http://google";
+    String recovery="http://google";
+    String kernel = "http://google";
     // Get the HTML file name
     String home = "home.html";
     String ErrorFile = "error.html";
@@ -118,7 +122,7 @@ public class MainActivity extends AppCompatActivity
             final WebView mywebview = (WebView) this.findViewById(R.id.webView);
             mywebview.getSettings() .setJavaScriptCanOpenWindowsAutomatically(true);
             mywebview.addJavascriptInterface(new WebAppInterface(this), "Android");
-            mywebview.loadUrl("http://google");
+            mywebview.loadUrl(rom);
             mywebview.setWebViewClient(new WebViewClient() {
 
                 public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
@@ -131,21 +135,48 @@ public class MainActivity extends AppCompatActivity
 
         else if (id == R.id.nav_recovery)
         {
+            final WebView mywebview = (WebView) this.findViewById(R.id.webView);
+            mywebview.getSettings() .setJavaScriptCanOpenWindowsAutomatically(true);
+            mywebview.addJavascriptInterface(new WebAppInterface(this), "Android");
+            mywebview.loadUrl(recovery);
+            mywebview.setWebViewClient(new WebViewClient() {
 
+                public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
+                    mywebview.loadUrl(error);
+
+                }
+            });
         }
         else if (id == R.id.nav_kernel)
         {
+            final WebView mywebview = (WebView) this.findViewById(R.id.webView);
+            mywebview.getSettings() .setJavaScriptCanOpenWindowsAutomatically(true);
+            mywebview.addJavascriptInterface(new WebAppInterface(this), "Android");
+            mywebview.loadUrl(kernel);
+            mywebview.setWebViewClient(new WebViewClient() {
 
+                public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
+                    mywebview.loadUrl(error);
+
+                }
+            });
         }
 
         else if (id == R.id.nav_contact)
         {
+            final WebView mywebview = (WebView) this.findViewById(R.id.webView);
+            mywebview.getSettings() .setJavaScriptCanOpenWindowsAutomatically(true);
+            mywebview.addJavascriptInterface(new WebAppInterface(this), "Android");
+            mywebview.loadUrl(contact);
+            mywebview.setWebViewClient(new WebViewClient() {
 
-        }
-        else if (id == R.id.nav_request)
-        {
+                public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
+                    mywebview.loadUrl(error);
 
+                }
+            });
         }
+
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

@@ -23,10 +23,7 @@
                 android:id="@+id/nav_contact"
                 android:icon="@drawable/ic_menu_share"
                 android:title="Contact" />
-            <item
-                android:id="@+id/nav_request"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Request to add rom/recovery/kernel" />
+
         </menu>
     </item>
 
