@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    android:background="#FFF"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.ait.sumit.ait.MainActivity"
     tools:showIn="@layout/app_bar_main">
@@ -12,6 +12,8 @@
     <WebView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/webview"/>
-
+        android:id="@+id/webView"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 </RelativeLayout>

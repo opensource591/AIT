@@ -18,10 +18,16 @@ import android.webkit.JavascriptInterface;
 import android.webkit.WebView;
 import android.widget.Toast;
 
+import java.io.IOException;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
-        String home="http://foxer.site88.net/";
-
+    //strings
+    String asset = "file:///android_asset/";
+    // Get the HTML file name
+    String home = "home.html";
+    String file = asset+home;
+    //
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -69,7 +75,7 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         // Check if the key event was the Back button and if there's history
-        WebView mywebview = (WebView) this.findViewById(R.id.webview);
+        WebView mywebview = (WebView) this.findViewById(R.id.webView);
         if ((keyCode == KeyEvent.KEYCODE_BACK) && mywebview.canGoBack()) {
             mywebview.goBack();
             return true;
@@ -83,10 +89,10 @@ public class MainActivity extends AppCompatActivity
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
-        WebView mywebview = (WebView) this.findViewById(R.id.webview);
+        WebView mywebview = (WebView) this.findViewById(R.id.webView);
         mywebview.getSettings() .setJavaScriptCanOpenWindowsAutomatically(true);
         mywebview.addJavascriptInterface(new WebAppInterface(this), "Android");
-        mywebview.loadUrl(home);
+        mywebview.loadUrl(file);
         return true;
     }
 
