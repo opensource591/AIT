@@ -1,9 +1,12 @@
 package com.ait.sumit.ait;
 
+import android.Manifest;
 import android.content.Context;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.ActivityCompat;
 import android.view.KeyEvent;
 import android.view.View;
 import android.support.design.widget.NavigationView;
@@ -41,6 +44,7 @@ public class MainActivity extends AppCompatActivity
     String error = asset+ErrorFile;
     //
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,8 +62,21 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
+                     } else {
+            //TODO when users deny
+                            }
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+            ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 100);
+        } else {
+            //TODO when users deny
+        }
 
     }
+
+
+
 
     public class WebAppInterface {
         Context mContext;
@@ -109,7 +126,7 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_reboot) {
+        if (id == R.id.action_reboot_recovery) {
             Process p;
             try {
                 // Preform su to get root privledges
@@ -127,6 +144,85 @@ public class MainActivity extends AppCompatActivity
                     if (p.exitValue() != 255) {
                         // TODO Code to run on success
                         Shell.SU.run("reboot recovery");
+
+                    }
+                    else {
+                        // TODO Code to run on unsuccessful
+                        WebView mywebview = (WebView) this.findViewById(R.id.webView);
+                        mywebview.getSettings() .setJavaScriptCanOpenWindowsAutomatically(true);
+                        mywebview.addJavascriptInterface(new WebAppInterface(this), "Android");
+                        mywebview.loadUrl(unrooted);
+
+                    }
+                } catch (InterruptedException e) {
+                    WebView mywebview = (WebView) this.findViewById(R.id.webView);
+                    mywebview.getSettings() .setJavaScriptCanOpenWindowsAutomatically(true);
+                    mywebview.addJavascriptInterface(new WebAppInterface(this), "Android");
+                    mywebview.loadUrl(unrooted);
+                }
+            } catch (IOException e) {
+                // TODO Code to run in input/output exception
+            }
+            return true;
+        }
+        if (id == R.id.action_reboot) {
+            Process p;
+            try {
+                // Preform su to get root privledges
+                p = Runtime.getRuntime().exec("su");
+
+                // Attempt to write a file to a root-only
+                DataOutputStream os = new DataOutputStream(p.getOutputStream());
+                os.writeBytes("echo \"Do I have root?\" >/system/sd/temporary.txt\n");
+
+                // Close the terminal
+                os.writeBytes("exit\n");
+                os.flush();
+                try {
+                    p.waitFor();
+                    if (p.exitValue() != 255) {
+                        // TODO Code to run on success
+                        Shell.SU.run("reboot");
+
+                    }
+                    else {
+                        // TODO Code to run on unsuccessful
+                        WebView mywebview = (WebView) this.findViewById(R.id.webView);
+                        mywebview.getSettings() .setJavaScriptCanOpenWindowsAutomatically(true);
+                        mywebview.addJavascriptInterface(new WebAppInterface(this), "Android");
+                        mywebview.loadUrl(unrooted);
+
+                    }
+                } catch (InterruptedException e) {
+                    WebView mywebview = (WebView) this.findViewById(R.id.webView);
+                    mywebview.getSettings() .setJavaScriptCanOpenWindowsAutomatically(true);
+                    mywebview.addJavascriptInterface(new WebAppInterface(this), "Android");
+                    mywebview.loadUrl(unrooted);
+                }
+            } catch (IOException e) {
+                // TODO Code to run in input/output exception
+            }
+            return true;
+        }
+
+        if (id == R.id.action_power) {
+            Process p;
+            try {
+                // Preform su to get root privledges
+                p = Runtime.getRuntime().exec("su");
+
+                // Attempt to write a file to a root-only
+                DataOutputStream os = new DataOutputStream(p.getOutputStream());
+                os.writeBytes("echo \"Do I have root?\" >/system/sd/temporary.txt\n");
+
+                // Close the terminal
+                os.writeBytes("exit\n");
+                os.flush();
+                try {
+                    p.waitFor();
+                    if (p.exitValue() != 255) {
+                        // TODO Code to run on success
+                        Shell.SU.run("reboot -p");
 
                     }
                     else {

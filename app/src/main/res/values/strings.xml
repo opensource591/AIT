@@ -3,6 +3,7 @@
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-
-    <string name="action_reboot">Reboot Recovery</string>
+    <string name="action_reboot">Reboot</string>
+    <string name="action_power">Power Off</string>
+    <string name="action_reboot_recovery">Reboot Recovery</string>
 </resources>
