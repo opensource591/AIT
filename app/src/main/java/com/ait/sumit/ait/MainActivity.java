@@ -19,6 +19,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Toast;
 
+import java.io.DataOutputStream;
 import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity
@@ -30,6 +31,8 @@ public class MainActivity extends AppCompatActivity
     String recovery="http://google";
     String kernel = "http://google";
     // Get the HTML file name
+    String unrooted= "unrooted.html";
+    String root_interrupted= "root_interrupted.html";
     String home = "home.html";
     String ErrorFile = "error.html";
     String file = asset+home;
@@ -104,6 +107,34 @@ public class MainActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            Process p;
+            try {
+                // Preform su to get root privledges
+                p = Runtime.getRuntime().exec("su");
+
+                // Attempt to write a file to a root-only
+                DataOutputStream os = new DataOutputStream(p.getOutputStream());
+                os.writeBytes("echo \"Do I have root?\" >/system/sd/temporary.txt\n");
+
+                // Close the terminal
+                os.writeBytes("exit\n");
+                os.flush();
+                try {
+                    p.waitFor();
+                    if (p.exitValue() != 255) {
+                        // TODO Code to run on success
+
+                    }
+                    else {
+                        // TODO Code to run on unsuccessful
+
+                    }
+                } catch (InterruptedException e) {
+                    // TODO Code to run in interrupted exception
+                }
+            } catch (IOException e) {
+                // TODO Code to run in input/output exception
+            }
             return true;
         }
 
