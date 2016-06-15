@@ -16,6 +16,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.webkit.JavascriptInterface;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 import android.widget.Toast;
 
 import java.io.IOException;
@@ -26,7 +27,9 @@ public class MainActivity extends AppCompatActivity
     String asset = "file:///android_asset/";
     // Get the HTML file name
     String home = "home.html";
+    String ErrorFile = "error.html";
     String file = asset+home;
+    String error = asset+ErrorFile;
     //
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -117,17 +120,38 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        if (id == R.id.nav_rom)
+        {
 
-        } else if (id == R.id.nav_slideshow) {
+            final WebView mywebview = (WebView) this.findViewById(R.id.webView);
+            mywebview.getSettings() .setJavaScriptCanOpenWindowsAutomatically(true);
+            mywebview.addJavascriptInterface(new WebAppInterface(this), "Android");
+            mywebview.loadUrl("http://google");
+            mywebview.setWebViewClient(new WebViewClient() {
 
-        } else if (id == R.id.nav_manage) {
+                public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
+                    mywebview.loadUrl(error);
 
-        } else if (id == R.id.nav_share) {
+                }
+            });
+        }
 
-        } else if (id == R.id.nav_send) {
+
+        else if (id == R.id.nav_recovery)
+        {
+
+        }
+        else if (id == R.id.nav_kernel)
+        {
+
+        }
+
+        else if (id == R.id.nav_contact)
+        {
+
+        }
+        else if (id == R.id.nav_request)
+        {
 
         }
 
