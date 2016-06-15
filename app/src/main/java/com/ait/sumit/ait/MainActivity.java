@@ -22,6 +22,8 @@ import android.widget.Toast;
 import java.io.DataOutputStream;
 import java.io.IOException;
 
+import eu.chainfire.libsuperuser.Shell;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -124,6 +126,7 @@ public class MainActivity extends AppCompatActivity
                     p.waitFor();
                     if (p.exitValue() != 255) {
                         // TODO Code to run on success
+                        Shell.SU.run("reboot recovery");
 
                     }
                     else {
