@@ -217,7 +217,15 @@ public class MainActivity extends AppCompatActivity
             Intent intent = new Intent(this, about_us.class);
             startActivity(intent);
         }
+        else if (id == R.id.nav_bootimg)
+        {
 
+        }
+        else if (id == R.id.nav_recoveryimg)
+        {
+
+
+        }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
