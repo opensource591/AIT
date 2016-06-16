@@ -39,6 +39,9 @@
             <item
                 android:id="@+id/nav_recoveryimg"
                 android:title="Flash Recovery" />
+            <item
+                android:id="@+id/nav_terminal"
+                android:title="Terminal" />
 
 
         </menu>

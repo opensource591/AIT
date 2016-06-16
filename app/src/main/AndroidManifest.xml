@@ -25,7 +25,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".about_us"></activity>
+        <activity android:name=".about_us" />
+        <activity android:name=".terminal"></activity>
     </application>
 
 </manifest>
