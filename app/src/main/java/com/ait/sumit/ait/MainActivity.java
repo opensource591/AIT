@@ -128,122 +128,18 @@ public class MainActivity extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_reboot_recovery) {
-            Process p;
-            try {
-                // Preform su to get root privledges
-                p = Runtime.getRuntime().exec("su");
+        
+                Shell.SU.run("reboot recovery");
 
-                // Attempt to write a file to a root-only
-                DataOutputStream os = new DataOutputStream(p.getOutputStream());
-                os.writeBytes("echo \"Do I have root?\" >/system/sd/temporary.txt\n");
-
-                // Close the terminal
-                os.writeBytes("exit\n");
-                os.flush();
-                try {
-                    p.waitFor();
-                    if (p.exitValue() != 255) {
-                        // TODO Code to run on success
-                        Shell.SU.run("reboot recovery");
-
-                    }
-                    else {
-                        // TODO Code to run on unsuccessful
-                        WebView mywebview = (WebView) this.findViewById(R.id.webView);
-                        mywebview.getSettings() .setJavaScriptCanOpenWindowsAutomatically(true);
-                        mywebview.addJavascriptInterface(new WebAppInterface(this), "Android");
-                        mywebview.loadUrl(unrooted);
-
-                    }
-                } catch (InterruptedException e) {
-                    WebView mywebview = (WebView) this.findViewById(R.id.webView);
-                    mywebview.getSettings() .setJavaScriptCanOpenWindowsAutomatically(true);
-                    mywebview.addJavascriptInterface(new WebAppInterface(this), "Android");
-                    mywebview.loadUrl(unrooted);
-                }
-            } catch (IOException e) {
-                // TODO Code to run in input/output exception
             }
-            return true;
-        }
         if (id == R.id.action_reboot) {
-            Process p;
-            try {
-                // Preform su to get root privledges
-                p = Runtime.getRuntime().exec("su");
+            Shell.SU.run("reboot");
 
-                // Attempt to write a file to a root-only
-                DataOutputStream os = new DataOutputStream(p.getOutputStream());
-                os.writeBytes("echo \"Do I have root?\" >/system/sd/temporary.txt\n");
-
-                // Close the terminal
-                os.writeBytes("exit\n");
-                os.flush();
-                try {
-                    p.waitFor();
-                    if (p.exitValue() != 255) {
-                        // TODO Code to run on success
-                        Shell.SU.run("reboot");
-
-                    }
-                    else {
-                        // TODO Code to run on unsuccessful
-                        WebView mywebview = (WebView) this.findViewById(R.id.webView);
-                        mywebview.getSettings() .setJavaScriptCanOpenWindowsAutomatically(true);
-                        mywebview.addJavascriptInterface(new WebAppInterface(this), "Android");
-                        mywebview.loadUrl(unrooted);
-
-                    }
-                } catch (InterruptedException e) {
-                    WebView mywebview = (WebView) this.findViewById(R.id.webView);
-                    mywebview.getSettings() .setJavaScriptCanOpenWindowsAutomatically(true);
-                    mywebview.addJavascriptInterface(new WebAppInterface(this), "Android");
-                    mywebview.loadUrl(unrooted);
-                }
-            } catch (IOException e) {
-                // TODO Code to run in input/output exception
-            }
-            return true;
         }
 
         if (id == R.id.action_power) {
-            Process p;
-            try {
-                // Preform su to get root privledges
-                p = Runtime.getRuntime().exec("su");
+            Shell.SU.run("reboot -p");
 
-                // Attempt to write a file to a root-only
-                DataOutputStream os = new DataOutputStream(p.getOutputStream());
-                os.writeBytes("echo \"Do I have root?\" >/system/sd/temporary.txt\n");
-
-                // Close the terminal
-                os.writeBytes("exit\n");
-                os.flush();
-                try {
-                    p.waitFor();
-                    if (p.exitValue() != 255) {
-                        // TODO Code to run on success
-                        Shell.SU.run("reboot -p");
-
-                    }
-                    else {
-                        // TODO Code to run on unsuccessful
-                        WebView mywebview = (WebView) this.findViewById(R.id.webView);
-                        mywebview.getSettings() .setJavaScriptCanOpenWindowsAutomatically(true);
-                        mywebview.addJavascriptInterface(new WebAppInterface(this), "Android");
-                        mywebview.loadUrl(unrooted);
-
-                    }
-                } catch (InterruptedException e) {
-                    WebView mywebview = (WebView) this.findViewById(R.id.webView);
-                    mywebview.getSettings() .setJavaScriptCanOpenWindowsAutomatically(true);
-                    mywebview.addJavascriptInterface(new WebAppInterface(this), "Android");
-                    mywebview.loadUrl(unrooted);
-                }
-            } catch (IOException e) {
-                // TODO Code to run in input/output exception
-            }
-            return true;
         }
 
         return super.onOptionsItemSelected(item);
