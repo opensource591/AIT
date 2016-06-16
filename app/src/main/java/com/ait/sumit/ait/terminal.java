@@ -1,6 +1,7 @@
 package com.ait.sumit.ait;
 
         import android.os.Bundle;
+        import android.text.method.ScrollingMovementMethod;
         import android.util.Log;
         import android.view.View;
         import android.widget.Button;
@@ -32,6 +33,7 @@ public class terminal extends Activity {
 
                 String outp = exe.Executer(command);
                 out.setText(outp);
+                out.setMovementMethod(new ScrollingMovementMethod());
                 Log.d("Output", outp);
             }
         });
