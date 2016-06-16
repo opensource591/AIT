@@ -2,6 +2,7 @@ package com.ait.sumit.ait;
 
 import android.Manifest;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -314,7 +315,12 @@ public class MainActivity extends AppCompatActivity
                 }
             });
         }
+        else if (id == R.id.nav_about)
+        {
 
+            Intent intent = new Intent(this, about_us.class);
+            startActivity(intent);
+        }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

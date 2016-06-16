@@ -14,6 +14,10 @@
             android:id="@+id/nav_kernel"
             android:icon="@drawable/ic_kernel"
             android:title="Kernel" />
+        <item
+            android:id="@+id/nav_about"
+            android:icon="@drawable/ic_about_us"
+            android:title="About" />
 
     </group>
 
