@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <resources>
+        <string name="app_name">AIT</string>
+
+        <string name="navigation_drawer_open">Açık Gezinme çekmecesini</string>
+        <string name="navigation_drawer_close">Gezinme çekmecesini kapat</string>
+        <string name="action_reboot">Reboot</string>
+        <string name="action_power">Kapat</string>
+        <string name="action_reboot_recovery">Reboot Kurtarma</string>
+    </resources>
+
+</resources>
