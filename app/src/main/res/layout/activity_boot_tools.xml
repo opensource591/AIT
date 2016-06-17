@@ -19,7 +19,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Flash Boot Image"
+        android:text="@string/flash_boot_image"
         android:id="@+id/flash"
         android:layout_below="@+id/boot_text"
         android:layout_centerHorizontal="true" />
@@ -27,7 +27,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Backup Boot Image"
+        android:text="@string/backup_boot_image"
         android:id="@+id/backup"
         android:layout_below="@+id/flash"
         android:layout_centerHorizontal="true" />
@@ -36,7 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="How to use ?"
+        android:text="@string/how_to_use"
         android:id="@+id/textView3"
         android:layout_below="@+id/backup"
         android:layout_centerHorizontal="true" />
@@ -46,7 +46,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Save boot.img file to your Internal sd in folder named AIT and click on flash button."
+        android:text="@string/save_boot_image"
         android:id="@+id/textView5"
         android:layout_below="@+id/textView4"
         android:layout_alignParentLeft="true"
@@ -57,7 +57,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Flash :-"
+        android:text="@string/flash"
         android:id="@+id/textView4"
         android:layout_below="@+id/textView3"
         android:layout_centerHorizontal="true" />

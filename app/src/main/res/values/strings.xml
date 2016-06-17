@@ -20,4 +20,9 @@
     <string name="flash_recovery">Flash Recovery</string>
     <string name="about">About</string>
     <string name="message">message</string>
+    <string name="flash_boot_image">Flash Boot Image</string>
+    <string name="backup_boot_image">Backup Boot Image</string>
+    <string name="how_to_use">How to use ?</string>
+    <string name="flash">Flash :-</string>
+    <string name="save_boot_image">Save boot.img file to your Internal sd in folder named AIT and click on flash button.</string>
 </resources>
