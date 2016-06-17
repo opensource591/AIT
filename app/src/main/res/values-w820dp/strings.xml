@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="permssive">Permssive</string>
+    <string name="enforcing">Enforcing</string>
+    <string name="change_selinux">Change Selinux</string>
+    <string name="not_rooted">"Device is not rooted "</string>
+</resources>

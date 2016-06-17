@@ -32,4 +32,8 @@
     <string name="title_activity_mods">mods</string>
 
     <string name="action_settings">Settings</string>
+    <string name="permssive">Permssive</string>
+    <string name="enforcing">Enforcing</string>
+    <string name="change_selinux">Change Selinux</string>
+    <string name="not_rooted">"Device is not rooted "</string>
 </resources>

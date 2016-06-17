@@ -32,7 +32,7 @@ public class boot_tools extends AppCompatActivity {
                         }
                         else {
                             TextView textView = (TextView) findViewById(R.id.boot_text);
-                            textView.setText("Device is not rooted ");
+                            textView.setText(R.string.not_rooted);
                         }
                     }
 
@@ -55,7 +55,7 @@ public class boot_tools extends AppCompatActivity {
                         }
                         else {
                             TextView textView = (TextView) findViewById(R.id.boot_text);
-                            textView.setText("Device is not rooted ");
+                            textView.setText(R.string.not_rooted);
                         }
                     }
 

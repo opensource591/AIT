@@ -15,7 +15,7 @@
     <Button
         android:layout_width="wrap_content"
         android:id="@+id/selinux_permssive"
-        android:text="Permssive"
+        android:text="@string/permssive"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView7"
         android:layout_centerHorizontal="true" />
@@ -24,7 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/selinux_enforcing"
-        android:text="Enforcing"
+        android:text="@string/enforcing"
         android:layout_below="@+id/selinux_permssive"
         android:layout_alignLeft="@+id/selinux_permssive"
         android:layout_alignStart="@+id/selinux_permssive" />
@@ -33,7 +33,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Change Selinux "
+        android:text="@string/change_selinux"
         android:id="@+id/textView7"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />

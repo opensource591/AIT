@@ -30,7 +30,7 @@ public class recovery_tools extends AppCompatActivity {
                         }
                         else {
                             TextView textView = (TextView) findViewById(R.id.flash_text);
-                            textView.setText("Device is not rooted ");
+                            textView.setText(R.string.not_rooted);
                         }
 
                     }
@@ -54,7 +54,7 @@ public class recovery_tools extends AppCompatActivity {
                         }
                         else {
                             TextView textView = (TextView) findViewById(R.id.flash_text);
-                            textView.setText("Device is not rooted ");
+                            textView.setText(R.string.not_rooted);
                         }
                     }
 

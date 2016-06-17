@@ -34,7 +34,7 @@ public class mods extends AppCompatActivity {
                         }
                         else{
                             TextView textView = (TextView) findViewById(R.id.changed_selinux);
-                            textView.setText("Device is not rooted ");                        }
+                            textView.setText(R.string.not_rooted);                        }
 
                     }
 
@@ -56,7 +56,7 @@ public class mods extends AppCompatActivity {
                         }
                         else {
                             TextView textView = (TextView) findViewById(R.id.changed_selinux);
-                            textView.setText("Device is not rooted ");
+                            textView.setText(R.string.not_rooted);
                         }
                     }
 

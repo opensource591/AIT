@@ -28,4 +28,8 @@
     <string name="backup_recovery_image">BACKUP RECOVERY IMAGE</string>
     <string name="flash_recovey_image">flash recovey image</string>
     <string name="mods">Mods</string>
+    <string name="permssive">Permssive</string>
+    <string name="enforcing">Enforcing</string>
+    <string name="change_selinux">Change Selinux</string>
+    <string name="not_rooted">"Device is not rooted "</string>
 </resources>
