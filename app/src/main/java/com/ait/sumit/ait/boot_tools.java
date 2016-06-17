@@ -24,7 +24,7 @@ public class boot_tools extends AppCompatActivity {
                         TextView textView = (TextView)findViewById(R.id.boot_text);
                         textView.setText("Saved to sdcard/AIT/Boot.img");
                         Shell.SU.run("mkdir /sdcard/AIT");
-                        Shell.SU.run("dd if=/dev/block/mmcblk0p8 of=sdcard/AIT/boot.img");
+                        Shell.SU.run("dd if=/dev/block/mmcblk0p5 of=sdcard/AIT/boot.img");
 
                     }
 
@@ -39,8 +39,7 @@ public class boot_tools extends AppCompatActivity {
                     {
                         TextView textView = (TextView)findViewById(R.id.boot_text);
                         textView.setText("Flashed boot.img from /sdcard/AIT/boot.img");
-                        Shell.SU.run("mkdir /sdcard/AIT");
-                        Shell.SU.run("dd if=sdcard/AIT/boot.img of=/dev/block/mmcblk0p8");
+                        Shell.SU.run("dd if=sdcard/AIT/boot.img of=/dev/block/mmcblk0p5");
 
                     }
 

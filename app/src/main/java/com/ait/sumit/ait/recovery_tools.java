@@ -20,8 +20,8 @@ public class recovery_tools extends AppCompatActivity {
                 {
                     public void onClick(View v)
                     {
-                        TextView textView = (TextView)findViewById(R.id.backup_recovery);
-                        textView.setText("Saved to sdcard/AIT/Boot.img");
+                        TextView textView = (TextView)findViewById(R.id.flash_text);
+                        textView.setText("Saved to sdcard/AIT/recovery.img");
                         Shell.SU.run("mkdir /sdcard/AIT");
                         Shell.SU.run("dd if=/dev/block/mmcblk0p6 of=sdcard/AIT/recovery.img");
 
@@ -36,9 +36,9 @@ public class recovery_tools extends AppCompatActivity {
                 {
                     public void onClick(View v)
                     {
-                        TextView textView = (TextView)findViewById(R.id.flash_recovery);
-                        textView.setText("Flashed boot.img from /sdcard/AIT/recovery.img");
-                        Shell.SU.run("dd if=sdcard/AIT/boot.img of=/dev/block/mmcblk0p6");
+                        TextView textView = (TextView)findViewById(R.id.flash_text);
+                        textView.setText("Flashed recovery.img from /sdcard/AIT/recovery.img");
+                        Shell.SU.run("dd if=sdcard/AIT/recovery.img of=/dev/block/mmcblk0p6");
 
                     }
 
