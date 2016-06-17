@@ -27,4 +27,5 @@
     <string name="save_boot_image">Guardar el archivo boot.img en tu SD interna en una carpeta llamada AIT y haga clic en el botón de flash.</string>
     <string name="backup_recovery_image">BACKUP RECOVERY IMAGE</string>
     <string name="flash_recovey_image">flash recovey image</string>
+    <string name="mods">Mods</string>
 </resources>
