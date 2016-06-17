@@ -16,8 +16,6 @@ public class boot_tools extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_boot_tools);
         Button newbutton = (Button)findViewById(R.id.backup);
-        TextView newview=(TextView)findViewById(R.id.textView7);
-        newview.setMovementMethod(new ScrollingMovementMethod());
         newbutton.setOnClickListener(
                 new Button.OnClickListener()
                 {
