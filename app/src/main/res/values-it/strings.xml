@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">AIT</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_reboot">Reboot</string>
+    <string name="action_power">Power Off</string>
+    <string name="action_reboot_recovery">Reboot Recovery</string>
+    <string name="execute">Execute</string>
+    <string name="terminal">Terminal</string>
+    <string name="example_ls">Example - ls</string>
+    <string name="thinking_for_email_address">thinking for email address</string>
+    <string name="rom_s">Rom\'s</string>
+    <string name="recovery">Recovery</string>
+    <string name="kernel">Kernel</string>
+    <string name="communicate">Communicate</string>
+    <string name="contact">Contact</string>
+    <string name="for_root_users">FOR ROOT USERS</string>
+    <string name="flash_boot">Flash Boot</string>
+    <string name="flash_recovery">Flash Recovery</string>
+    <string name="about">About</string>
+    <string name="message">message</string>
+    <string name="flash_boot_image">Flash Boot Image</string>
+    <string name="backup_boot_image">Backup Boot Image</string>
+    <string name="how_to_use">How to use ?</string>
+    <string name="flash">Flash :-</string>
+    <string name="save_boot_image">Save boot.img file to your Internal sd in folder named AIT and click on flash button.</string>
+</resources>
