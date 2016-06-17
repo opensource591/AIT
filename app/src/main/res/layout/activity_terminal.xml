@@ -3,19 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.ait.sumit.ait.terminal">
+    tools:context="com.ait.sumit.ait.about_us">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        app:popupTheme="@style/AppTheme.PopupOverlay"
-        android:layout_alignParentTop="true"
-        android:layout_alignLeft="@+id/txt"
-        android:layout_alignStart="@+id/txt" />
+
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
