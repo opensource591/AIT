@@ -10,4 +10,13 @@
     <string name="terminal">Terminal</string>
     <string name="example_ls">Example - ls</string>
     <string name="thinking_for_email_address">thinking for email address</string>
+    <string name="rom_s">Rom\'s</string>
+    <string name="recovery">Recovery</string>
+    <string name="kernel">Kernel</string>
+    <string name="communicate">Communicate</string>
+    <string name="contact">Contact</string>
+    <string name="for_root_users">FOR ROOT USERS</string>
+    <string name="flash_boot">Flash Boot</string>
+    <string name="flash_recovery">Flash Recovery</string>
+    <string name="about">About</string>
 </resources>
