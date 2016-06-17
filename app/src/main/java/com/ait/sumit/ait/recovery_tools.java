@@ -20,10 +20,18 @@ public class recovery_tools extends AppCompatActivity {
                 {
                     public void onClick(View v)
                     {
-                        TextView textView = (TextView)findViewById(R.id.flash_text);
-                        textView.setText("Saved to sdcard/AIT/recovery.img");
-                        Shell.SU.run("mkdir /sdcard/AIT");
-                        Shell.SU.run("dd if=/dev/block/mmcblk0p6 of=sdcard/AIT/recovery.img");
+                        boolean suAvailable = false;
+                        suAvailable = Shell.SU.available();
+                        if (suAvailable) {
+                            TextView textView = (TextView) findViewById(R.id.flash_text);
+                            textView.setText("Saved to sdcard/AIT/recovery.img");
+                            Shell.SU.run("mkdir /sdcard/AIT");
+                            Shell.SU.run("dd if=/dev/block/mmcblk0p6 of=sdcard/AIT/recovery.img");
+                        }
+                        else {
+                            TextView textView = (TextView) findViewById(R.id.flash_text);
+                            textView.setText("Device is not rooted ");
+                        }
 
                     }
 
@@ -36,10 +44,18 @@ public class recovery_tools extends AppCompatActivity {
                 {
                     public void onClick(View v)
                     {
-                        TextView textView = (TextView)findViewById(R.id.flash_text);
-                        textView.setText("Flashed recovery.img from /sdcard/AIT/recovery.img");
-                        Shell.SU.run("dd if=sdcard/AIT/recovery.img of=/dev/block/mmcblk0p6");
+                        boolean suAvailable = false;
+                        suAvailable = Shell.SU.available();
+                        if (suAvailable) {
+                            TextView textView = (TextView) findViewById(R.id.flash_text);
+                            textView.setText("Flashed recovery.img from /sdcard/AIT/recovery.img");
+                            Shell.SU.run("dd if=sdcard/AIT/recovery.img of=/dev/block/mmcblk0p6");
 
+                        }
+                        else {
+                            TextView textView = (TextView) findViewById(R.id.flash_text);
+                            textView.setText("Device is not rooted ");
+                        }
                     }
 
                 }

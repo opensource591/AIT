@@ -21,11 +21,19 @@ public class boot_tools extends AppCompatActivity {
                 {
                     public void onClick(View v)
                     {
-                        TextView textView = (TextView)findViewById(R.id.boot_text);
-                        textView.setText("Saved to sdcard/AIT/Boot.img");
-                        Shell.SU.run("mkdir /sdcard/AIT");
-                        Shell.SU.run("dd if=/dev/block/mmcblk0p5 of=sdcard/AIT/boot.img");
+                        boolean suAvailable = false;
+                        suAvailable = Shell.SU.available();
+                        if (suAvailable) {
+                            TextView textView = (TextView) findViewById(R.id.boot_text);
+                            textView.setText("Saved to sdcard/AIT/Boot.img");
+                            Shell.SU.run("mkdir /sdcard/AIT");
+                            Shell.SU.run("dd if=/dev/block/mmcblk0p5 of=sdcard/AIT/boot.img");
 
+                        }
+                        else {
+                            TextView textView = (TextView) findViewById(R.id.boot_text);
+                            textView.setText("Device is not rooted ");
+                        }
                     }
 
                 }
@@ -37,10 +45,18 @@ public class boot_tools extends AppCompatActivity {
                 {
                     public void onClick(View v)
                     {
-                        TextView textView = (TextView)findViewById(R.id.boot_text);
-                        textView.setText("Flashed boot.img from /sdcard/AIT/boot.img");
-                        Shell.SU.run("dd if=sdcard/AIT/boot.img of=/dev/block/mmcblk0p5");
+                        boolean suAvailable = false;
+                        suAvailable = Shell.SU.available();
+                        if (suAvailable) {
+                            TextView textView = (TextView) findViewById(R.id.boot_text);
+                            textView.setText("Flashed boot.img from /sdcard/AIT/boot.img");
+                            Shell.SU.run("dd if=sdcard/AIT/boot.img of=/dev/block/mmcblk0p5");
 
+                        }
+                        else {
+                            TextView textView = (TextView) findViewById(R.id.boot_text);
+                            textView.setText("Device is not rooted ");
+                        }
                     }
 
                 }
