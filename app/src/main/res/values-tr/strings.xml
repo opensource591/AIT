@@ -19,4 +19,5 @@
     <string name="flash_boot">Flash Boot</string>
     <string name="flash_recovery">Flash Recovery</string>
     <string name="about">About</string>
+    <string name="message">message</string>
 </resources>
