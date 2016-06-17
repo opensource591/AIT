@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-<string name="app_name">AIT</string>
-<string name="navigation_drawer_open">Açık Gezinme çekmecesini</string>
-<string name="navigation_drawer_close">Gezinme çekmecesini kapat</string>
-<string name="action_reboot">Reboot</string>
-<string name="action_power">Kapat</string>
-<string name="action_reboot_recovery">Reboot Kurtarma</string>
-<string name="execute">Execute</string>
-<string name="terminal">Terminal</string>
-<string name="example_ls">Example - ls</string>
-<string name="thinking_for_email_address">thinking for email address</string>
-    <string name="rom_s">Rom\'s</string>
+    <string name="app_name">AIT</string>
+    <string name="navigation_drawer_open">Gezinme çekmecesini aç</string>
+    <string name="navigation_drawer_close">Gezinme çekmecesini kapat</string>
+    <string name="action_reboot">Yeniden başlat</string>
+    <string name="action_power">Kapat</string>
+    <string name="action_reboot_recovery">Kurtarma moduna başlat</string>
+    <string name="execute">Çalıştır</string>
+    <string name="terminal">Terminal</string>
+    <string name="example_ls">Örnek: cd /sdcard/</string>
+    <string name="thinking_for_email_address">(Düşünülüyor)</string>
+    <string name="rom_s">Romlar</string>
     <string name="recovery">Recovery</string>
     <string name="kernel">Kernel</string>
-    <string name="communicate">Communicate</string>
-    <string name="contact">Contact</string>
-    <string name="for_root_users">FOR ROOT USERS</string>
-    <string name="flash_boot">Flash Boot</string>
-    <string name="flash_recovery">Flash Recovery</string>
-    <string name="about">About</string>
+    <string name="communicate">İletişim</string>
+    <string name="contact">İletişim</string>
+    <string name="for_root_users">ROOT KULLANICILARI İÇİN</string>
+    <string name="flash_boot">Boot imajı flaşla</string>
+    <string name="flash_recovery">Recovery imajı flaşla</string>
+    <string name="about">Hakkında</string>
 </resources>
