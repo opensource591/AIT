@@ -24,13 +24,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".about_us" />
-        <activity android:name=".terminal" />
-        <activity android:name=".boot_tools" />
-        <activity android:name=".recovery_tools" />
+        <activity android:name=".about_us"
+                  android:label="About Us" />
+        <activity android:name=".terminal"
+                  android:label="Terminal" />
+        <activity android:name=".boot_tools"
+                  android:label="Flash and Backup Kernel" />
+        <activity android:name=".recovery_tools"
+                  android:label="Flash and Backup Recovery" />
         <activity
             android:name=".mods"
-            android:label="@string/title_activity_mods"/>
+            android:label="Mods"/>
     </application>
 
 </manifest>

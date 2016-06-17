@@ -6,24 +6,12 @@
     tools:context="com.ait.sumit.ait.about_us">
 
 
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textAlignment="center"
-        android:text="@string/terminal"
-        android:id="@+id/textView2"
-        android:layout_below="@+id/toolbar"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
     <EditText
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/txt"
         android:hint="@string/example_ls"
-        android:layout_below="@+id/textView2"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_alignStart="@+id/textView2" />
+        android:layout_below="@+id/toolbar" />
     <Button
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
