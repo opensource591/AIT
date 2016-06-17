@@ -224,7 +224,8 @@ public class MainActivity extends AppCompatActivity
         }
         else if (id == R.id.nav_recoveryimg)
         {
-
+            Intent intent = new Intent(this, recovery_tools.class);
+            startActivity(intent);
 
         }
         else if (id == R.id.nav_terminal)

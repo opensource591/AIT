@@ -1,6 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">AIT</string>
-
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="action_reboot">Reboot</string>
@@ -25,4 +25,7 @@
     <string name="how_to_use">How to use ?</string>
     <string name="flash">Flash :-</string>
     <string name="save_boot_image">Save boot.img file to your Internal sd in folder named AIT and click on flash button.</string>
+    <string name="save_recovery_img">Save recovery.img file to your Internal sd in folder named AIT and click on flash button.</string>
+    <string name="backup_recovery_image">BACKUP RECOVERY IMAGE</string>
+    <string name="flash_recovey_image">flash recovey image</string>
 </resources>

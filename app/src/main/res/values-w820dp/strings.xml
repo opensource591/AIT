@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="save_recovery_img">Save recovery.img file to your Internal sd in folder named AIT and click on flash button.</string>
+    <string name="backup_recovery_image">BACKUP RECOVERY IMAGE</string>
+    <string name="flash_recovey_image">flash recovey image</string>
+</resources>
