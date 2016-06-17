@@ -25,7 +25,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".about_us" />
-        <activity android:name=".terminal"/>
+        <activity android:name=".terminal" />
+        <activity android:name=".boot_tools"></activity>
     </application>
 
 </manifest>

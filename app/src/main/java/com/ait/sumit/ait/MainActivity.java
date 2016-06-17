@@ -219,7 +219,8 @@ public class MainActivity extends AppCompatActivity
         }
         else if (id == R.id.nav_bootimg)
         {
-
+            Intent intent = new Intent(this, boot_tools.class);
+            startActivity(intent);
         }
         else if (id == R.id.nav_recoveryimg)
         {
