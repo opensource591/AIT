@@ -21,7 +21,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:textAlignment="center"
-        android:text="Terminal"
+        android:text="@string/terminal"
         android:id="@+id/textView2"
         android:layout_below="@+id/toolbar"
         android:layout_alignParentRight="true"
@@ -30,7 +30,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/txt"
-        android:hint="Example - ls"
+        android:hint="@string/example_ls"
         android:layout_below="@+id/textView2"
         android:layout_alignLeft="@+id/textView2"
         android:layout_alignStart="@+id/textView2" />
@@ -38,7 +38,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btn"
-        android:text="Execute"
+        android:text="@string/execute"
         android:layout_below="@+id/txt"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />

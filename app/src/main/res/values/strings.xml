@@ -6,4 +6,8 @@
     <string name="action_reboot">Reboot</string>
     <string name="action_power">Power Off</string>
     <string name="action_reboot_recovery">Reboot Recovery</string>
+    <string name="execute">Execute</string>
+    <string name="terminal">Terminal</string>
+    <string name="example_ls">Example - ls</string>
+    <string name="thinking_for_email_address">thinking for email address</string>
 </resources>
