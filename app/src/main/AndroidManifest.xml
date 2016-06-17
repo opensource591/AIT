@@ -27,7 +27,10 @@
         <activity android:name=".about_us" />
         <activity android:name=".terminal" />
         <activity android:name=".boot_tools" />
-        <activity android:name=".recovery_tools"></activity>
+        <activity android:name=".recovery_tools" />
+        <activity
+            android:name=".mods"
+            android:label="@string/title_activity_mods"/>
     </application>
 
 </manifest>

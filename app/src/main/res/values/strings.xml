@@ -29,4 +29,7 @@
     <string name="backup_recovery_image">BACKUP RECOVERY IMAGE</string>
     <string name="flash_recovey_image">flash recovey image</string>
     <string name="mods">Mods</string>
+    <string name="title_activity_mods">mods</string>
+
+    <string name="action_settings">Settings</string>
 </resources>

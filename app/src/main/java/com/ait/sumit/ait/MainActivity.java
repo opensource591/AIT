@@ -233,6 +233,11 @@ public class MainActivity extends AppCompatActivity
             Intent intent = new Intent(this, terminal.class);
             startActivity(intent);
         }
+        else if (id == R.id.nav_mod)
+        {
+            Intent intent = new Intent(this, mods.class);
+            startActivity(intent);
+        }
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
