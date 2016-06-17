@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity
     String ErrorFile = "error.html";
     String file = asset+home;
     String error = asset+ErrorFile;
+    boolean suAvailable = false;
     //
 
 
@@ -125,21 +126,42 @@ public class MainActivity extends AppCompatActivity
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
+        suAvailable = Shell.SU.available();
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_reboot_recovery) {
-        
+
+            if (suAvailable) {
+
                 Shell.SU.run("reboot recovery");
+            }
+            else
+            {
+                Toast.makeText(getApplicationContext(),R.string.not_rooted,Toast.LENGTH_LONG).show();
+
+            }
 
             }
         if (id == R.id.action_reboot) {
-            Shell.SU.run("reboot");
+            if (suAvailable) {
+                Shell.SU.run("reboot");
 
+            }
+            else {
+                Toast.makeText(getApplicationContext(), R.string.not_rooted, Toast.LENGTH_LONG).show();
+
+            }
         }
 
         if (id == R.id.action_power) {
-            Shell.SU.run("reboot -p");
+            if (suAvailable) {
+                Shell.SU.run("reboot -p");
 
+            }
+            else {
+                Toast.makeText(getApplicationContext(), R.string.not_rooted, Toast.LENGTH_LONG).show();
+
+            }
         }
         if (id == R.id.action_settings) {
             Intent intent = new Intent(this, settings.class);
