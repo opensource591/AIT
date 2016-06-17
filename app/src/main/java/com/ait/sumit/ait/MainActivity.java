@@ -141,6 +141,10 @@ public class MainActivity extends AppCompatActivity
             Shell.SU.run("reboot -p");
 
         }
+        if (id == R.id.action_settings) {
+            Intent intent = new Intent(this, settings.class);
+            startActivity(intent);
+        }
 
         return super.onOptionsItemSelected(item);
     }
