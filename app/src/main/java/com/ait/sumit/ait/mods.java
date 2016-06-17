@@ -1,5 +1,6 @@
 package com.ait.sumit.ait;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -33,7 +34,9 @@ public class mods extends AppCompatActivity {
                             Shell.SU.run("setenforce 1");
                         }
                         else{
+
                             TextView textView = (TextView) findViewById(R.id.changed_selinux);
+                            textView.setTextColor(Color.parseColor("#FF0000"));
                             textView.setText(R.string.not_rooted);                        }
 
                     }
@@ -56,6 +59,7 @@ public class mods extends AppCompatActivity {
                         }
                         else {
                             TextView textView = (TextView) findViewById(R.id.changed_selinux);
+                            textView.setTextColor(Color.parseColor("#FF0000"));
                             textView.setText(R.string.not_rooted);
                         }
                     }

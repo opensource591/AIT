@@ -1,5 +1,6 @@
 package com.ait.sumit.ait;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
@@ -32,6 +33,7 @@ public class boot_tools extends AppCompatActivity {
                         }
                         else {
                             TextView textView = (TextView) findViewById(R.id.boot_text);
+                            textView.setTextColor(Color.parseColor("#FF0000"));
                             textView.setText(R.string.not_rooted);
                         }
                     }
@@ -55,6 +57,7 @@ public class boot_tools extends AppCompatActivity {
                         }
                         else {
                             TextView textView = (TextView) findViewById(R.id.boot_text);
+                            textView.setTextColor(Color.parseColor("#FF0000"));
                             textView.setText(R.string.not_rooted);
                         }
                     }

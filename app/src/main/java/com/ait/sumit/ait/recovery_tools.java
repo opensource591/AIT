@@ -1,5 +1,6 @@
 package com.ait.sumit.ait;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -30,6 +31,7 @@ public class recovery_tools extends AppCompatActivity {
                         }
                         else {
                             TextView textView = (TextView) findViewById(R.id.flash_text);
+                            textView.setTextColor(Color.parseColor("#FF0000"));
                             textView.setText(R.string.not_rooted);
                         }
 
@@ -54,6 +56,7 @@ public class recovery_tools extends AppCompatActivity {
                         }
                         else {
                             TextView textView = (TextView) findViewById(R.id.flash_text);
+                            textView.setTextColor(Color.parseColor("#FF0000"));
                             textView.setText(R.string.not_rooted);
                         }
                     }
