@@ -24,9 +24,17 @@ public class mods extends AppCompatActivity {
                 {
                     public void onClick(View v)
                     {
-                        TextView textView = (TextView)findViewById(R.id.changed_selinux);
-                        textView.setText("changed to enforcing");
-                        Shell.SU.run("setenforce 1");
+                        boolean suAvailable = false;
+                        suAvailable = Shell.SU.available();
+                        if (suAvailable) {
+
+                            TextView textView = (TextView) findViewById(R.id.changed_selinux);
+                            textView.setText("changed to enforcing");
+                            Shell.SU.run("setenforce 1");
+                        }
+                        else{
+                            TextView textView = (TextView) findViewById(R.id.changed_selinux);
+                            textView.setText("Device is not rooted ");                        }
 
                     }
 
@@ -38,10 +46,18 @@ public class mods extends AppCompatActivity {
                 {
                     public void onClick(View v)
                     {
-                        TextView textView = (TextView)findViewById(R.id.changed_selinux);
-                        textView.setText("changed to permssive");
-                        Shell.SU.run("setenforce 0");
+                        boolean suAvailable = false;
+                        suAvailable = Shell.SU.available();
+                        if (suAvailable) {
+                            TextView textView = (TextView) findViewById(R.id.changed_selinux);
+                            textView.setText("changed to permssive");
+                            Shell.SU.run("setenforce 0");
 
+                        }
+                        else {
+                            TextView textView = (TextView) findViewById(R.id.changed_selinux);
+                            textView.setText("Device is not rooted ");
+                        }
                     }
 
                 }
