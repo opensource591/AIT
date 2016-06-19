@@ -36,7 +36,7 @@ public class mods extends AppCompatActivity {
                         else{
 
                             TextView textView = (TextView) findViewById(R.id.changed_selinux);
-                            textView.setTextColor(Color.parseColor("#FF0000"));
+                            textView.setTextColor(getResources().getColor(R.color.errorColor));
                             textView.setText(R.string.not_rooted);                        }
 
                     }
@@ -59,7 +59,7 @@ public class mods extends AppCompatActivity {
                         }
                         else {
                             TextView textView = (TextView) findViewById(R.id.changed_selinux);
-                            textView.setTextColor(Color.parseColor("#FF0000"));
+                            textView.setTextColor(getResources().getColor(R.color.errorColor));
                             textView.setText(R.string.not_rooted);
                         }
                     }
