@@ -36,4 +36,10 @@
     <string name="enforcing">Enforcing</string>
     <string name="change_selinux">Change Selinux</string>
     <string name="not_rooted">"Device is not rooted "</string>
+    <string name="saved_boot">Saved to sdcard/AIT/Boot.img</string>
+    <string name="flashed_boot">Flashed boot.img from /sdcard/AIT/boot.img</string>
+    <string name="setenforce1">Changed to enforcing</string>
+    <string name="setenforce0">Changed to permssive</string>
+    <string name="saved_recovery">Saved to sdcard/AIT/recovery.img</string>
+    <string name="flashed_recovery">Flashed recovery.img from /sdcard/AIT/recovery.img</string>
 </resources>

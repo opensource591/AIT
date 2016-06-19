@@ -30,7 +30,7 @@ public class mods extends AppCompatActivity {
                         if (suAvailable) {
 
                             TextView textView = (TextView) findViewById(R.id.changed_selinux);
-                            textView.setText("changed to enforcing");
+                            textView.setText(R.string.setenforce1);
                             Shell.SU.run("setenforce 1");
                         }
                         else{
@@ -53,7 +53,7 @@ public class mods extends AppCompatActivity {
                         suAvailable = Shell.SU.available();
                         if (suAvailable) {
                             TextView textView = (TextView) findViewById(R.id.changed_selinux);
-                            textView.setText("changed to permssive");
+                            textView.setText(R.string.setenforce0);
                             Shell.SU.run("setenforce 0");
 
                         }
