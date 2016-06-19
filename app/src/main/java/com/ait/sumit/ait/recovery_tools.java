@@ -31,7 +31,7 @@ public class recovery_tools extends AppCompatActivity {
                         }
                         else {
                             TextView textView = (TextView) findViewById(R.id.flash_text);
-                            textView.setTextColor(Color.parseColor("#FF0000"));
+                            textView.setTextColor(getResources().getColor(R.color.errorColor));
                             textView.setText(R.string.not_rooted);
                         }
 
@@ -56,7 +56,7 @@ public class recovery_tools extends AppCompatActivity {
                         }
                         else {
                             TextView textView = (TextView) findViewById(R.id.flash_text);
-                            textView.setTextColor(Color.parseColor("#FF0000"));
+                            textView.setTextColor(getResources().getColor(R.color.errorColor));
                             textView.setText(R.string.not_rooted);
                         }
                     }
