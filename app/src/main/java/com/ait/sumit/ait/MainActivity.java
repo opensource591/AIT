@@ -1,6 +1,7 @@
 package com.ait.sumit.ait;
 
 import android.Manifest;
+import android.app.FragmentManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -25,6 +26,7 @@ import android.widget.Toast;
 import java.io.DataOutputStream;
 import java.io.IOException;
 
+import Fragments.MainFragment;
 import eu.chainfire.libsuperuser.Shell;
 
 public class MainActivity extends AppCompatActivity
@@ -86,6 +88,8 @@ public class MainActivity extends AppCompatActivity
         } else {
             //TODO when users deny
         }
+        FragmentManager fm = getFragmentManager();
+        fm.beginTransaction().replace(R.id.content_frame, new MainFragment()).commit();
 
     }
 
@@ -186,7 +190,7 @@ public class MainActivity extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
+        FragmentManager fm = getFragmentManager();
         int id = item.getItemId();
 
         if (id == R.id.nav_rom)
